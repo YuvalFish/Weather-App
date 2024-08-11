@@ -1,8 +1,23 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --primary-color: #11998e;
+    --secondary-color: #38ef7d;
+    --gray: #9b9b9b;
+}
+
 body {
     font-family: monospace;
     min-height: 100vh;
     font-size: 1.5rem;
     background-color: #222222;
+    color: #fff;
+    height: 100%;
+    overflow: hidden;
 }
 
 .main {
@@ -14,6 +29,7 @@ body {
     align-items: center;
 }
 
+/* Form styling */
 .city-form {
     position: relative;
     padding: 15px 0 0;
@@ -23,13 +39,13 @@ body {
 .city-search {
     width: 100%;
     border: 0;
-    border-bottom: 2px solid #9b9b9b;
+    border-bottom: 2px solid var(--gray);
     outline: 0;
     font-size: 1.3rem;
     color: #fff;
     padding: 7px 0;
     background: transparent;
-    transition: border-color 0.2s;
+    /* transition: border-color 0.2s; */
 
     &::placeholder {
         color: transparent;
@@ -48,7 +64,7 @@ body {
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: #9b9b9b;
+    color: var(--gray);
 }
 
 .city-search:focus {
@@ -58,18 +74,66 @@ body {
         display: block;
         transition: 0.2s;
         font-size: 1rem;
-        color: #11998e;
+        color: var(--primary-color);
         font-weight: 700;
     }
 
     padding-bottom: 6px;
     font-weight: 700;
     border-width: 3px;
-    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     
     border-image-slice: 1;
 }
 
 .city-search {
     &:required,&:invalid {box-shadow: none;}
+}
+
+.hero {
+    margin-top: 50px;
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #222222; */
+
+    position: relative;
+    border-radius: 15px;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: -.5rem;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--primary-color),
+        var(--secondary-color),
+        var(--primary-color));
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+}
+
+.hero::after {
+    filter: blur(3.5rem);
+}
+
+.emoji {
+    font-size: 7rem;
+    margin: 0 0 10px 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
 }
