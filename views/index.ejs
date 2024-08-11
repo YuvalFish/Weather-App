@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <title>Weather</title>
+</head>
+<body>
+    <div class="main">
+
+        <div class="search">
+            <form action="/check" method="post" class="city-form">
+                <input id="city-search" type="text" class="city-search" name="city" placeholder="City name" aria-placeholder="City name" required> 
+                <label for="city-search" class="city-label">City name</label>
+            </form>
+        </div>
+
+        <div class="hero">
+            <h1>CITY NAME</h1>
+            <h3>It is currently TEMP degrees outside</h3>
+            <p class="emoji">🌤️</p>
+        </div>
+
+        <div class="footer">
+            <p>Yuval Fishbine © 2024</p>
+        </div>
+    </div>
+</body>
+</html>
