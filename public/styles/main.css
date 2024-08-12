@@ -37,7 +37,7 @@ body {
 }
 
 .city-search {
-    width: 100%;
+    width: 250px;
     border: 0;
     border-bottom: 2px solid var(--gray);
     outline: 0;
@@ -124,13 +124,31 @@ body {
 }
 
 .emoji {
+    transition: 0.5s;
     font-size: 7rem;
     margin: 0 0 10px 0;
+}
+
+.emoji:hover {
+    transition: 0.5s;
+    font-size: 9rem;
 }
 
 .footer {
     position: absolute;
     bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.feelsLike {
+    font-size: 1.5rem;
+    margin: 0;
+    position: relative;
+    top: -30px;
 }
 
 @keyframes rotation {

@@ -1,0 +1,41 @@
+{
+    "request": {
+      "type": "City",
+      "query": "Tel Aviv-Yafo, Israel",
+      "language": "en",
+      "unit": "m"
+    },
+    "location": {
+      "name": "Tel Aviv-Yafo",
+      "country": "Israel",
+      "region": "Tel Aviv",
+      "lat": "32.068",
+      "lon": "34.765",
+      "timezone_id": "Asia/Jerusalem",
+      "localtime": "2024-08-12 19:24",
+      "localtime_epoch": 1723490640,
+      "utc_offset": "3.0"
+    },
+    "current": {
+      "observation_time": "04:24 PM",
+      "temperature": 29,
+      "weather_code": 113,
+      "weather_icons": [
+        "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png"
+      ],
+      "weather_descriptions": [
+        "Sunny"
+      ],
+      "wind_speed": 13,
+      "wind_degree": 329,
+      "wind_dir": "NNW",
+      "pressure": 1005,
+      "precip": 0,
+      "humidity": 72,
+      "cloudcover": 7,
+      "feelslike": 32,
+      "uv_index": 7,
+      "visibility": 10,
+      "is_day": "yes"
+    }
+}

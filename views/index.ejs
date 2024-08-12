@@ -18,13 +18,37 @@
         </div>
 
         <div class="hero">
-            <h1 class="city-title">CITY NAME</h1>
-            <h3 class="degrees">It is currently TEMP degrees outside</h3>
-            <p class="emoji">🌤️</p>
+            <!-- Change city name -->
+            <% if (locals.cityName) { %>
+                <h1 class="city-title"><%= cityName %> </h1>
+            <% } else { %>
+                <h1 class="city-title">CITY NAME</h1>
+            <% } %>
+            
+            <!-- Change temp -->
+            <% if (locals.temp) { %>
+                <h3 class="degrees">It is currently <%= temp %> degrees outside</h3>
+            <% } else { %>
+                <h3 class="degrees">It is currently TEMP degrees outside</h3>
+            <% } %>
+
+            <!-- Change feelsLike temp -->
+            <% if (locals.feels) { %>
+                <p class="feelsLike">It really feels like <%= feels %> tho</p>
+            <% } else { %>
+                <p class="feelsLike">It really feels like TEMP tho</p>
+            <% } %>
+
+            <!-- Change emoji -->
+            <% if (locals.emoji) { %>
+                <p class="emoji"><%= emoji %></p>
+            <% } else { %>
+                <p class="emoji">🌤️</p>
+            <% } %>
         </div>
 
         <footer class="footer">
-            <p>Yuval Fishbine © <%= new Date().getFullYear() %></p>
+            <p><a href="https://github.com/YuvalFish" target="_blank">Yuval Fishbine</a> © <%= new Date().getFullYear() %></p>
         </footer>
     </div>
 </body>
